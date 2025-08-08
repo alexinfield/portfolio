@@ -38,7 +38,7 @@ img[loading="lazy"]{content-visibility:auto}
 
 /* Homepage two-up grid with cropped tiles */
 .home{padding-top:calc(var(--header-h) + env(safe-area-inset-top))}
-.home .grid{max-width:none;margin:0;display:grid;grid-template-columns:repeat(2,1fr);column-gap:var(--home-col-gap,32px);row-gap:0;padding:0 calc(24px + env(safe-area-inset-right)) 0 calc(24px + env(safe-area-inset-left))}
+.home .grid{max-width:none;margin:0;display:grid;grid-template-columns:repeat(2,1fr);column-gap:var(--home-col-gap,32px);row-gap:0;padding:0 calc(var(--home-col-gap,32px) + env(safe-area-inset-right)) 0 calc(var(--home-col-gap,32px) + env(safe-area-inset-left))}
 
 /* Project pages: content below fixed header (keep slight buffer) */
 .stack{padding-top:calc(var(--header-h) + env(safe-area-inset-top)); margin-top:0}
@@ -61,19 +61,19 @@ img[loading="lazy"]{content-visibility:auto}
   .card .label{ font-size: calc(var(--font-size-label) * 0.94); font-weight:700; }
 }
 @media (min-width: 1024px){
-  /* Homepage card titles up 25% */
-  .home .card .label{ font-size: 20px; font-weight: 700; }
-  /* Header brand and nav down 25% */
+  /* Homepage card titles refined on desktop */
+  .home .card .label{ font-size: 18px; font-weight: 700; }
+  /* Header brand and nav (kept as previously adjusted) */
   .nav a.brand{ font-size: 24px; }
   .nav nav a{ font-size: 12px; }
 }
 @media (min-width: 1440px){
-  .home .card .label{ font-size: 22px; }
+  .home .card .label{ font-size: 20px; }
   .nav a.brand{ font-size: 27px; }
   .nav nav a{ font-size: 13px; }
 }
 @media (min-width: 1920px){
-  .home .card .label{ font-size: 25px; }
+  .home .card .label{ font-size: 22px; }
   .nav a.brand{ font-size: 30px; }
   .nav nav a{ font-size: 15px; }
 }
