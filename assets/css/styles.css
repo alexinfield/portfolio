@@ -56,24 +56,24 @@ img[loading="lazy"]{content-visibility:auto}
 }
 
 @media (min-width: 768px){
-  .nav a.brand{ font-size: calc(var(--font-size-h1) * 2); }
-  .nav nav a{ font-size: calc(var(--font-size-base) * 2); }
-  .card .label{ font-size: calc(var(--font-size-label) * 2); font-weight:700; }
+  .nav a.brand{ font-size: calc(var(--font-size-h1) * 0.56); }
+  .nav nav a{ font-size: calc(var(--font-size-base) * 0.56); }
+  .card .label{ font-size: calc(var(--font-size-label) * 0.94); font-weight:700; }
 }
 @media (min-width: 1024px){
-  /* Homepage card titles bigger on desktop */
-  .home .card .label{ font-size: 28px; font-weight: 700; }
-  /* Header brand and nav larger */
-  .nav a.brand{ font-size: 48px; }
-  .nav nav a{ font-size: 24px; }
+  /* Homepage card titles up 25% */
+  .home .card .label{ font-size: 20px; font-weight: 700; }
+  /* Header brand and nav down 25% */
+  .nav a.brand{ font-size: 24px; }
+  .nav nav a{ font-size: 12px; }
 }
 @media (min-width: 1440px){
-  .home .card .label{ font-size: 32px; }
-  .nav a.brand{ font-size: 56px; }
-  .nav nav a{ font-size: 26px; }
+  .home .card .label{ font-size: 22px; }
+  .nav a.brand{ font-size: 27px; }
+  .nav nav a{ font-size: 13px; }
 }
 @media (min-width: 1920px){
-  .home .card .label{ font-size: 36px; }
-  .nav a.brand{ font-size: 64px; }
-  .nav nav a{ font-size: 28px; }
+  .home .card .label{ font-size: 25px; }
+  .nav a.brand{ font-size: 30px; }
+  .nav nav a{ font-size: 15px; }
 }
