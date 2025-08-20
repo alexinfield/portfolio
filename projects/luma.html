@@ -14,6 +14,45 @@
     rel="shortcut icon" type="image/x-icon" />
   <link href="../cdn.prod.website-files.com/65e38724ba420d8b733d16eb/670ddbd51b914229437357cd_Frame%208.png"
     rel="apple-touch-icon" />
+  <style>
+    /* Ensure background videos fill the viewport and cover without letterboxing */
+    .w-background-video {
+      position: relative;
+      width: 100%;
+      height: auto;
+      margin: 0;
+    }
+    .w-background-video > video {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover !important;
+    }
+  /* Header-aware layout: push content below fixed header and size the top hero accordingly */
+  :root { --header-offset: 56px; }
+  body { padding-top: var(--header-offset); }
+    .w-background-video.top-hero {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      background-color: #000;
+      position: relative;
+    }
+  .w-background-video.top-hero > video {
+      object-fit: cover !important;
+      position: absolute !important;
+      inset: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+      z-index: 0 !important;
+    }
+  /* In-content background videos (non-hero): behave like 16:9 images */
+  .w-background-video:not(.top-hero) { aspect-ratio: 16 / 9; }
+  /* Reset Webflow's padding trick on this page */
+  .background-video { height: auto !important; padding-bottom: 0 !important; }
+  /* Simple image stack naming */
+  .project-stack { margin-top: 0 !important; }
+  .project-stack img { width: 100%; height: auto; display: block; }
+  </style>
 </head>
 
 <body class="body-6">
@@ -22,20 +61,32 @@
     <ul role="list" class="list-2 w-list-unstyled">
       <li><a href="../index.html" class="five link">Work</a></li>
       <li><a href="../info.html" class="five link">Info</a></li>
-      <li><a href="mailto:ainfield@risd.edu?subject=Hello%20there!" class="five link">Contact</a></li>
+  <li><a href="mailto:alex@infield.net" class="five link">Contact</a></li>
     </ul>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var header = document.querySelector('.header');
+      if (!header) return;
+      function applyOffset() {
+        var h = header.offsetHeight || 56;
+        document.documentElement.style.setProperty('--header-offset', h + 'px');
+      }
+      applyOffset();
+      window.addEventListener('resize', applyOffset);
+    });
+  </script>
   <!-- Animation v2222 video (mp4/webm only; poster not present locally) -->
   <div
     data-video-urls="../cdn.prod.website-files.com/65e38724ba420d8b733d16eb%252F671942823b1e029de07f60ba_animation%20v2222-transcode.mp4,../cdn.prod.website-files.com/65e38724ba420d8b733d16eb%252F671942823b1e029de07f60ba_animation%20v2222-transcode.webm"
     data-autoplay="true" data-loop="true" data-wf-ignore="true"
-    class="background-video w-background-video w-background-video-atom"><video autoplay="" loop="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
+    class="background-video w-background-video w-background-video-atom top-hero"><video autoplay="" loop="" muted="" playsinline="" data-wf-ignore="true" data-object-fit="cover">
       <source src="../cdn.prod.website-files.com/65e38724ba420d8b733d16eb%252F671942823b1e029de07f60ba_animation%20v2222-transcode.mp4" data-wf-ignore="true" />
       <source src="../cdn.prod.website-files.com/65e38724ba420d8b733d16eb%252F671942823b1e029de07f60ba_animation%20v2222-transcode.webm" data-wf-ignore="true" />
     </video></div>
 
   <!-- Image stack -->
-  <div class="furniture">
+  <div class="project-stack">
     <img src="../cdn.prod.website-files.com/65e38724ba420d8b733d16eb/67c857217cdd3cfa62c4ad76_2.png" loading="lazy" alt="" />
     <img src="../cdn.prod.website-files.com/65e38724ba420d8b733d16eb/67c85731a837541c4b9e07f5_3.png" loading="lazy" alt="" />
     <img src="../cdn.prod.website-files.com/65e38724ba420d8b733d16eb/67c8578aa6b6836a5c727a19_4.jpg" loading="lazy" alt="" />
@@ -67,7 +118,7 @@
     </video></div>
 
   <!-- Final image stack -->
-  <div class="furniture">
+  <div class="project-stack">
     <img src="../cdn.prod.website-files.com/65e38724ba420d8b733d16eb/67c858424cea9f608190074f_20.jpg" loading="lazy" alt="" />
     <img src="../cdn.prod.website-files.com/65e38724ba420d8b733d16eb/67c8584d496dcde53afe1a01_21.jpg" loading="lazy" alt="" />
     <img src="../cdn.prod.website-files.com/65e38724ba420d8b733d16eb/671870325ca38ba9064e3ea5_21%20render%201.avif" loading="lazy" alt="" />
