@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+.npm
+.yarn/
+
+# Build outputs
+dist/
+build/
+*.min.js
+*.min.css
+
+# External CDN assets - NO LONGER NEEDED (assets now organized locally)
+# cdn.prod.website-files.com/
+# cdn.*/
+
+# Development files
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.local
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Backup files
+backup*/
+old*/
+archive*/

@@ -1,3 +1,0 @@
-User-agent: *
-Disallow: /
-# Remove Disallow when you switch domains to make this your primary site.
