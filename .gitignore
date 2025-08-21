@@ -9,9 +9,9 @@ build/
 *.min.js
 *.min.css
 
-# External CDN assets (prevent re-downloading huge external assets)
-cdn.prod.website-files.com/
-cdn.*/
+# External CDN assets - NO LONGER NEEDED (assets now organized locally)
+# cdn.prod.website-files.com/
+# cdn.*/
 
 # Development files
 .DS_Store
